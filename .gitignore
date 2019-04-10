@@ -1,0 +1,4 @@
+# ignore data
+Data
+running_mean_sam.npz
+.ipynb_checkpoints
