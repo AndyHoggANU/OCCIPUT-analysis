@@ -2,5 +2,4 @@
 Data
 running_mean_sam.npz
 .ipynb_checkpoints
-*.png
 *.nc
