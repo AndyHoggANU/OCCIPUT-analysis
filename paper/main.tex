@@ -1,4 +1,3 @@
-
 \documentclass{agujournal2019-navid}
 
 \graphicspath{ {figures/} }
@@ -158,23 +157,37 @@ Andrew McC. Hogg\affil{1}, Thierry Penduff\affil{2}, Sally E. Close\affil{3}, Wi
 \affiliation{3}{Institut des Géosciences de l'Environnement, CNRS/Univ. Grenoble Alpes/G-INP/IRD, France}
 \affiliation{3}{Florida State University, Tallahassee, FL, USA}
 
-\correspondingauthor{Navid C. Constantinou}{navid.constantinou@anu.edu.au}
+\correspondingauthor{Andrew McC. Hogg}{Andy.Hogg@anu.edu.au}
 
-% \begin{keypoints}
-% \item An isopycnal layered model, with a varying number of fluid layers, is used to assess relative importance of barotropic and baroclinic processes in the Southern Ocean.
-% \item Both baroclinic and barotropic flows exhibit regimes in which mean zonal transport is insensitive to wind stress.
-% \item Eddies actively shape the time-mean flow, irrespective of the instabilities from which they originate. 
-% \end{keypoints}
-
-
-
+\begin{keypoints}
+\item Variations in the Southern Ocean eddy field are dominated by intrinsic, rather than forced, processes.
+\item The forced component of the the variance is governed by the local wind stress input.
+\item The eddy field lags variations in wind stress, with two clear timescales emerging: one at 6-9 months, which we attribute to baroclinic instability, and one at 2-3 years, which we attribute to the delayed effect of topographic steering.
+\end{keypoints}
 
 \begin{abstract}
-We study here this and that...
+Circulation in the Southern Ocean is unique in global ocean.
+The strong wind stress forcing and buoyancy fluxes, in concert with the lack of continental boundaries, conspire to drive the Antarctic Circumpolar Current replete with an intense eddy field.
+The effect of Southern Ocean eddies on the ocean circulation is significant -- they modulate the momentum balance of the zonal flow, and the meridional transport of tracers and mass.
+The strength of the eddy field is controlled by a combination of forcing (primarily thought to be wind stress) and intrinsic variability associated with the turbulent flow field itself.
+Here, we present results from an eddy-permitting ensemble of ocean model simulations to investigate the relative contribution of forcing and intrinsic processes in governing the variability of the Southern Ocean eddy field.
+We find that intrinsic processes dominate the eddy field.
+Where correlations between the forcing and the eddy field exist, these interactions are dominated by two distinct timescale -- a fast baroclinic instability response; and a multi-year process owing to feedback between bathymetry and the mean flow.
+These results suggest that understanding Southern Ocean eddy dynamics requires an ensemble approach to eliminate intrinsic variability, and therefore may not yield robust conclusions from observations alone.
 
 \noindent \textbf{Plain language summary} \\
-\noindent In plain words, we do this and that...
+\noindent The Southern Ocean is the most turbulent region of the world's oceans.
+The variations in this turbulence, which is often referred to as \emph{eddies}, is critical to understanding the evolution of the Southern Ocean under climate change.
+But it's hard to get information about these eddies, because they occur on small scales in a large ocean basin that is poorly observed.
+In addition, the observational record is quite short, which makes it more difficult to use these observations to study what controls variation in the eddy field.
+For this reason, we take an eddy-permitting ocean model, and run it 50 times with the same forcing (but a slightly different initial state).
+The chaotic nature of the turbulent ocean means that these models runs diverge into different states.
+We thus use these simulations to study which eddy processes are intrinsic (that is, a consequence of the chaotic nature of turbulence) and which are forced by the external forcing that is common to all experiments (such as wind forcing).
+We conclude that the Southern Ocean eddy field is dominated by intrinsic chaotic processes; but that the forced variability responds to wind on particular timescales that are controlled by the mechanisms that generate ocean turbulence. 
 \end{abstract}
+
+
+
 
 %% ------------------------------------------------------------------------ %%
 %
@@ -209,7 +222,7 @@ Paragraph on intrinsic-forced ratio and its limitations.
 
 
 \section{Results}
-Figure 1 - (a) TKE snapshot and (b) TKE climatology
+Figure 1 - (a) TKE snapshot and (b) TKE climatology and perhaps (c) ensemble spread in TKE.
 
 Figure 2 - Entire Southern Ocean:(a,b) cherrypicked experiments TKE + lag; (c) ensemble mean TKE + lag
 
@@ -217,7 +230,7 @@ Figure 3 - 4 or 6 sectors TKE + lag
 
 Figure 4 - interesting regions - again 4 or 6 of them, TKE + lags
 
-Figure 5 - Ri ration plot, and other global features
+Figure 5 - Ri ratio plot, and other global features
 
 \section{Discussion}
 How do we interpret intrinsic variance ratio in this case?
