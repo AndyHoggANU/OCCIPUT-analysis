@@ -8,7 +8,7 @@
 \linenumbers
 
 \newcommand{\navidcomment}[1]{{\color{red} [#1]}}
-\newcommand{\andycomment}[1]{{\color{Green} [#1]}}
+\newcommand{\andycomment}[1]{{\color{blue} [#1]}}
 
 %\usepackage[T1]{fontenc}
 %\renewcommand*\familydefault{\sfdefault} 
@@ -164,10 +164,26 @@ This ensemble is based on the DRAKKAR-ORCA025 \citep[e.g.][]{Barnier2006} implem
 The ensemble incorporates ocean-sea ice hindcast simulations for the period 1960-2015.
 The ensemble uses the DRAKKAR Forcing Set DFS5.2 (Dussin 2016) with  0.25$^\circ$ lateral resolution and 75 vertical levels.
 
+\andycomment{Thierry could add more if needed?}
 
-\subsection{Calculating geouv from SSH, removing trends, etc. (Sally)}
 
-\subsection{TKE and filtering  to eliminate seasonal signal}
+\subsection{Estimating geostrophic eddy velocity}
+For each ensemble member, the sea surface height, $\eta_i$, is saved as a 5-daily average (where $i$ represents the ensemble member) . 
+The sea level anomaly, $\eta_i'$ is calculated as the transient component of sea level, given by 
+\[ \eta_i' = \eta_i - \overline{\eta_i}\]
+where $\overline{\cdot}$ represents the temporal average over the simulation.
+The sea level anomaly is detrended, and then used to calculate the eddy velocity field.
+Surface eddy velocity in each ensemble member, $\mathbf{u}_i' = (u_i', v_i')$ is estimated from the detrended sea level anomaly via the geostrophic relation,
+\[u_i' = - \frac{g}{f} \frac{\partial \eta_i'}{\partial y}; \quad v_i' = \frac{g}{f} \frac{\partial \eta_i'}{\partial x}\]
+where $g$ is the acceleration due to gravity and $f$ is the local Coriolis parameter.
+Anomalous values of $\mathbf{u}_i'$ close to coastlines are removed.
+
+\andycomment{Sally to add details about SLA processing?}
+
+\subsection{Calculating eddy kinetic energy}
+The surface eddy kinetic energy for each ensemble member is calculated as 
+\[E_i = \frac{1}{2}(u_i'^2 + v_i'^2)\]
+and subsampled at monthly temporal resolution.
 
 \subsection{Ratio of intrinsic to forced variance}
 
