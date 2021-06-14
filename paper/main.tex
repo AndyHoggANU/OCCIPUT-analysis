@@ -11,9 +11,9 @@
 \newcommand{\andycomment}[1]{{\color{Green} [#1]}}
 
 %\usepackage[T1]{fontenc}
-\renewcommand*\familydefault{\sfdefault} 
-\usepackage{sansmath} 
-\sansmath
+%\renewcommand*\familydefault{\sfdefault} 
+%\usepackage{sansmath} 
+%\sansmath
 
 \newcommand{\mathbfit}[1]{\textbf{\textit{\textsf{#1}}}}
 \usepackage{amsfonts, amssymb, amsmath}
@@ -165,11 +165,24 @@ The ensemble incorporates ocean-sea ice hindcast simulations for the period 1960
 The ensemble uses the DRAKKAR Forcing Set DFS5.2 (Dussin 2016) with  0.25$^\circ$ lateral resolution and 75 vertical levels.
 
 
-Calculating geouv from SSH, removing trends, etc. (Sally)
+\subsection{Calculating geouv from SSH, removing trends, etc. (Sally)}
 
-Paragraph on TKE and filtering  to eliminate seasonal signal (Andy)
+\subsection{TKE and filtering  to eliminate seasonal signal}
 
-Paragraph on intrinsic-forced ratio and its limitations.
+\subsection{Ratio of intrinsic to forced variance}
+
+Calculate the time-variance of the ensemble-mean EKE:
+$$\sigma^2_{\langle E \rangle} = \frac{1}{T} \sum_{t=1}^T \left(\langle E_i \rangle -  \overline{\langle E_i \rangle}\right)^2$$
+
+Take the difference from the ensemble mean for each member:
+$$E_i' = E_i - \langle E_i \rangle$$
+This allows us to accumulate the ensemble variance,
+$$\epsilon^2(t) = \frac{1}{N} \sum_{n=i}^N E_i'(t)^2$$
+indicating the spread of each member from the ensemble mean.
+
+Now calculate the ratio of intrinsic variance
+$$ R_i =  \frac{\overline{\epsilon^2}}{\overline{\epsilon^2} + \sigma^2_{\langle E \rangle}}$$
+
 
 
 \section{Results}
@@ -188,15 +201,15 @@ The patterns of EKE in this model broadly match the regional variations of EKE o
 \end{center}
 \end{figure}
 
-For each of the 50 members of the OCCIPUT ensemble we take the EKE averaged over the entire Southern Ocean, and plot the timeseries of this quantity in thin grey lines in Fig.~\ref{Fig:2}(a). 
+For each of the 50 members of the OCCIPUT ensemble we take the EKE averaged over the entire Southern Ocean, and plot the deseasonalised EKE anomalies in thin grey lines in Fig.~\ref{Fig:2}(a). 
 This plot highlights the considerable spread in EKE, even when averaged over the full circumpolar belt; in other words, there is a significant component of intrinsic variability in the Southern Ocean eddy field.
-Nonetheless, when averaged over all ensemble members (red line in Fig.~\ref{Fig:2}a) the coherent, forced, component of eddy variability is revealed.
-Averaged over this region the fraction, $R_i$, of intrinsic variance is 0.69, confirming the visual impression that intrinsic processes are dominant here.
+Nonetheless, when averaged over all ensemble members (red line in Fig.~\ref{Fig:2}a) the existence of a coherent (forced) component of eddy variability is revealed.
+Averaged over this region the fraction, $R_i$, of intrinsic variance is 0.82, confirming the visual impression that intrinsic processes are dominant in the Southern Ocean eddy field.
 
 \begin{figure}[t]
 \begin{center}
 \includegraphics[width=\hsize]{Figure2}
-\caption{Eddy kinetic energy statistics over the Southern Ocean (40$^\circ$S--60$^\circ$S). (a) Spatially averaged EKE for individual ensemble members (grey) and the ensemble mean (red) along with wind stress (black); and (b) Time-lagged correlation for the ensemble mean (blue) and individual ensemble  members (grey) -- with two individual ensemble members highlighted in magenta/orange.}
+\caption{Eddy kinetic energy statistics over the Southern Ocean (40$^\circ$S--60$^\circ$S). (a) Spatially averaged EKE anomaly (relative to climatology) for individual ensemble members (grey) and the ensemble mean (red) along with wind stress (black); and (b) Time-lagged correlation for the ensemble mean (red) and individual ensemble  members (grey) -- with two individual ensemble members highlighted in magenta/orange.}
 \label{Fig:2}
 \end{center}
 \end{figure}
@@ -206,10 +219,9 @@ Previous studies have suggested that there is a strong contribution of wind stre
 This comparison suggests a relationship in which wind stress leads variations in EKE, consistent with previously published results.
 However, the time-lagged correlations between wind stress and EKE suggests that this relationship is complex. 
 The intrinsically variable nature of Southern Ocean eddies means that for some ensemble members, there is no meaningful correlation between wind stress and eddies (grey lines in Fig~\ref{Fig:2}b).
-On the other hand, ensemble member 4 (magenta line) has a clear an significant (??) correlation with a 7-month lag, while member 5 (orange line) is correlated weakly at 6 months, and strongly correlated at a 28-month lag.
-These isolated examples highlight how each ensemble member behaves differently, but the ensemble mean (blue line) includes a correlation at $\sim$6 months and a second clear peak at $\sim$30 months.
+On the other hand, ensemble member 5 (magenta line) has a clear (and significant; T-value = 5.5) correlation with a 4-month lag, while member 25 (orange line) is correlated weakly at 6 months, and significantly correlated (T-value = 4.2) at a 24-month lag.
+These isolated examples highlight how each ensemble member behaves differently, but the ensemble mean (red line) includes a significant correlation at $\sim$4 months and a second sifgnificant peak at $\sim$30 months.
 Thus, there appear to be two distinct timescales of response of the Southern Ocean eddy field to wind stress. 
-
 
 \begin{figure}[t]
 \begin{center}
@@ -253,12 +265,32 @@ The circumpolar variation in both EKE response times and intrinsic variability s
 
 
 
-Figure 5 -- showing that it is local wind forcing that matters
+\begin{figure}[t]
+\begin{center}
+\includegraphics[width=\hsize]{Figure5}
+\caption{ TBC}
+\label{Fig:5}
+\end{center}
+\end{figure}
 
-Figure 6 - Ri ratio plot, and other global features
+The correlations between local wind and the ensemble mean EKE shows that, where forced variability in Southern Ocean EKE occurs, it can be well-explained by variations in wind stress.
+However, these correlations are based purely on local wind stress -- averaged over the same area as the EKE statistics.
+The existence of multi-year lags between the wind and the EKE suggests that local winds may not be the only source of energy for eddy generation; in particular, it is possible that energy could be advected a considerable distance downstream during this lag period.
+To investigate this question we now take each of the regions outlined in Fig. \ref{Fig:3} and look at the spatial correlation between wind stress and the local ensemble mean EKE (Fig. \ref{Fig:5}.
+To make this calculation, wind stress is first coarsened to a 2$^\circ \times $2$^\circ$ grid, and wind stress in each of those coarsened grid cells correlated with EKE at different lags.
+In the Southeast Indian Ocean, Fig.~\ref{Fig:3}(c) shows correlation maxima at 7 months and 30 months; the spatial variation of this correlation is shown in Fig. \ref{Fig:5}(a,b) respectively.
+These figures highlight a key feature of Southern Ocean wind stress, which is that there are strong correlations between wind stress at a given latitude; nonetheless, the maximum correlation between wind stress and EKE occurs within the EKE-averaging region.
+This correlation is lower in magnitude at 30 months (consistent with Fig.~\ref{Fig:3}c), but at both 7 and 30 month lags the correlation with wind upstream of the EKE-averaging region is not stronger than within the EKE-averaging region.
+A similar result is found in the Southwest Pacific Ocean (Fig.~\ref{Fig:5}c); wind stress correlations are relatively uniform across the Pacific Ocean owing the autocorrelation of winds, but the correlations are less circumpolar than the Southeast Indian Ocean.
+Importantly, there is no suggestion of a strong correlation with wind stress upstream of the EKE-averaging region.
+In the South Atlantic, the EKE is not strongly correlated with wind stress, either in the local region or elsewhere in the Southern Ocean (Fig.~\ref{Fig:5}d);
+Thus, these spatial maps demonstrate that, where strong forced variability in the EKE exists, it is most strongly linked to local wind stress, with no suggestion of upstream or remote wind input playing a strong role. 
 
 \section{Discussion}
 How do we interpret intrinsic variance ratio in this case?
+
+Figure 6 - Ri ratio plot, and other global features
+
 
 What can we infer about real world?
 
