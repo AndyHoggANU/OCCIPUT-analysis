@@ -169,18 +169,30 @@ The ensemble uses the DRAKKAR Forcing Set DFS5.2 (Dussin 2016) with  0.25$^\circ
 \subsection{Estimating geostrophic eddy velocity}
 For each ensemble member, the sea surface height, $\eta_i$, is saved as a 5-daily average (where $i$ represents the ensemble member) . 
 The sea level anomaly, $\eta_i'$ is calculated as the transient component of sea level, given by 
-\[ \eta_i' = \eta_i - \overline{\eta_i}\]
+\begin{linenomath*}
+\begin{equation}
+\eta_i' = \eta_i - \overline{\eta_i}
+\end{equation}
+\end{linenomath*}
 where $\overline{\cdot}$ represents the temporal average over the simulation.
 The sea level anomaly is detrended, and then used to calculate the eddy velocity field.
 Surface eddy velocity in each ensemble member, $\mathbf{u}_i' = (u_i', v_i')$ is estimated from the detrended sea level anomaly via the geostrophic relation,
-\[u_i' = - \frac{g}{f} \frac{\partial \eta_i'}{\partial y}; \quad v_i' = \frac{g}{f} \frac{\partial \eta_i'}{\partial x}\]
+\begin{linenomath*}
+\begin{equation}
+u_i' = - \frac{g}{f} \frac{\partial \eta_i'}{\partial y}; \quad v_i' = \frac{g}{f} \frac{\partial \eta_i'}{\partial x}
+\end{equation}
+\end{linenomath*}
 where $g$ is the acceleration due to gravity and $f$ is the local Coriolis parameter.
 Anomalous values of $\mathbf{u}_i'$ close to coastlines are removed.
 
 \andycomment{Sally to add details about SLA processing?}
 
 The surface eddy kinetic energy for each ensemble member is calculated as 
-\[E_i = \frac{1}{2}(u_i'^2 + v_i'^2)\]
+\begin{linenomath*}
+\begin{equation}
+E_i = \frac{1}{2}(u_i'^2 + v_i'^2)
+\end{equation}
+\end{linenomath*}
 and subsampled at monthly temporal resolution.
 It is notable that $E_i$ contains a large component of seasonal variation (Mart\`inez-Moreno et al. 2021, submitted) which dominates the statistics.
 To look at the forced response, we therefore deseasonalise $E_i$, by removing the climatological mean for each month.
@@ -189,28 +201,56 @@ We then proceed to compute ensemble statistics from this deseasonalised EKE.
 \subsection{Ensemble eddy statistics}
 
 The eddy kinetic energy can be averaged over the $N$ ensemble members to give the ensemble mean EKE, written as
-\[\langle E_i \rangle = \frac{1}{N} \sum_{i=1}^N E_i.\]
+\begin{linenomath*}
+\begin{equation}
+\langle E_i \rangle = \frac{1}{N} \sum_{i=1}^N E_i.
+\end{equation}
+\end{linenomath*}
 The argument can be made that, since each ensemble member is forced with identical atmospheric conditions, the forced EKE response is encapsulated by this ensemble mean quantity.
 On the other hand, the intrinsic variability of EKE in each ensemble member is found by taking the difference from the ensemble mean for each member,
-\[E_i' = E_i - \langle E_i \rangle.\]
+\begin{linenomath*}
+\begin{equation}
+E_i' = E_i - \langle E_i \rangle.
+\end{equation}
+\end{linenomath*}
 Armed with these expressions we follow \citet{Leroux2018} to define the  time-variance of the ensemble-mean EKE,
-\[\sigma^2_{\langle E \rangle} = \frac{1}{T} \sum_{t=1}^T \left(\langle E_i \rangle -  \overline{\langle E_i \rangle}\right)^2,\]
+\begin{linenomath*}
+\begin{equation}
+\sigma^2_{\langle E \rangle} = \frac{1}{T} \sum_{t=1}^T \left(\langle E_i \rangle -  \overline{\langle E_i \rangle}\right)^2,
+\end{equation}
+\end{linenomath*}
 which represents the variance of the forced eddy response.
 Analogously, the intrinsic variance emerges from the variance,
-$$\epsilon^2(t) = \frac{1}{N} \sum_{i=1}^N E_i'(t)^2$$
+\begin{linenomath*}
+\begin{equation}
+\epsilon^2(t) = \frac{1}{N} \sum_{i=1}^N E_i'(t)^2
+\end{equation}
+\end{linenomath*}
 indicating the spread of each member from the ensemble mean.
 The fraction of intrinsic variance is then computed as the ratio of the intrinsic variance to the total variance,
-\[R_i =  \frac{\overline{\epsilon^2}}{\overline{\epsilon^2} + \sigma^2_{\langle E \rangle}}.\]
+\begin{linenomath*}
+\begin{equation}
+R_i =  \frac{\overline{\epsilon^2}}{\overline{\epsilon^2} + \sigma^2_{\langle E \rangle}}.
+\end{equation}
+\end{linenomath*}
 When $R_i$ approaches unity, the system is dominated by intrinsic variability, and at the limit  of $R_i \to 0$ the system is solely responding to forced variability induced by atmospheric forcing.
 
 To examine the relationship between the EKE (of either the ensemble mean, or from individual ensemble members) we are guided by previous work which emphasises the role of wind stress in governing the eddy variability at different timescales \citep[e.g.][]{Hogg2015, Sinha2016}.
 Thus, we look at the correlation coefficient, $r$, at a range of lags between the EKE and the wind stress $\tau$ (which is identical for all ensemble members).
 For each correlation we evaluate the statistical significance of the correlation \citep[following, e.g.][]{Santer2000}.
 We first calculate the effective sample size, $N_e$, where
-\[N_e \equiv N \frac{1-r_1 r_2}{1+r_1 r_2}\]
+\begin{linenomath*}
+\begin{equation}
+N_e \equiv N \frac{1-r_1 r_2}{1+r_1 r_2}
+\end{equation}
+\end{linenomath*}
 where $N$ is the total number of samples (444 months for this timeseries), $r_1$ is the lag-1 autocorrelation for EKE and $r_2$ is the lag-2 autocorrelation for wind stress.
 We use the Students t-test to infer statistical significance (at the 95\%-level) based on this effective sample size, when
-\[T = \frac{r \sqrt{N_e}}{\sqrt{1-r^2}} > 2.\]
+\begin{linenomath*}
+\begin{equation}
+T = \frac{r \sqrt{N_e}}{\sqrt{1-r^2}} > 2.
+\end{equation}
+\end{linenomath*}
 
 
 \section{Results}
@@ -352,8 +392,8 @@ It also highlights the difficulty faced in distinguishing the processes that gov
 
 
 \acknowledgments
-We acknowledge NCI for everything they do for us.
-
+This research was undertaken with the assistance of resources and services from the National Computational Infrastructure (NCI), which is supported by the Australian Government.
+AMH is gratefully to the support of 
 \andycomment{Thierry, please add OCCIPUT acknowledgements}
 
 \bibliography{references}
