@@ -83,23 +83,23 @@ Andrew McC. Hogg\affil{1}, Thierry Penduff\affil{2}, Sally E. Close\affil{3}, Wi
 \correspondingauthor{Andrew McC. Hogg}{Andy.Hogg@anu.edu.au}
 
 \begin{keypoints}
-\item Variations in the Southern Ocean eddy field are dominated by intrinsic, rather than forced, processes.
-\item The forced component of the variance is significantly correlated with the local wind stress input.
-\item The eddy field lags variations in wind stress, with two clear timescales emerging: one at $\sim$6 months, which we attribute to baroclinic instability, and one at 2-3 years, which we attribute to the delayed effect of topographic steering.
+\item Variability in the Southern Ocean eddy field are dominated by intrinsic, rather than forced, processes.
+\item The forced component of the eddy kinetic energy variance is significantly correlated with the local wind stress input.
+\item The eddy field lags the wind stress, with two clear timescales emerging: one at $\sim$6 months, which we attribute to baroclinic instability, and one at 2-3 years, which we attribute to the delayed effect of topographic steering.
 \end{keypoints}
 
 \begin{abstract}
-Circulation in the Southern Ocean is unique in global ocean.
+Circulation in the Southern Ocean is unique.
 The strong wind stress forcing and buoyancy fluxes, in concert with the lack of continental boundaries, conspire to drive the Antarctic Circumpolar Current replete with an intense eddy field.
 The effect of Southern Ocean eddies on the ocean circulation is significant -- they modulate the momentum balance of the zonal flow, and the meridional transport of tracers and mass.
 The strength of the eddy field is controlled by a combination of forcing (primarily thought to be wind stress) and intrinsic variability associated with the turbulent flow field itself.
-Here, we present results from an eddy-permitting ensemble of ocean model simulations to investigate the relative contribution of forcing and intrinsic processes in governing the variability of the Southern Ocean eddy field.
+Here, we present results from an eddy-permitting ensemble of ocean model simulations to investigate the relative contribution of forcing and intrinsic processes in governing the variability of Southern Ocean eddy kinetic energy.
 We find that intrinsic processes dominate the eddy field.
-Where correlations between the forcing and the eddy field exist, these interactions are dominated by two distinct timescale -- a fast baroclinic instability response; and a multi-year process owing to feedback between bathymetry and the mean flow.
+Where correlations between the forcing and the eddy field exist, these interactions are dominated by two distinct timescales -- a fast baroclinic instability response; and a multi-year process owing to feedback between bathymetry and the mean flow.
 These results suggest that understanding Southern Ocean eddy dynamics requires an ensemble approach to eliminate intrinsic variability, and therefore may not yield robust conclusions from observations alone.
 
 \noindent \textbf{Plain language summary} \\
-\noindent The Southern Ocean is the most turbulent region of the world's oceans.
+\noindent The Southern Ocean is the most turbulent part of the world's oceans.
 The variations in this turbulence, which is often referred to as \emph{eddies}, is critical to understanding the evolution of the Southern Ocean under climate change.
 But it's hard to get information about these eddies, because they occur on small scales in a large ocean basin that is poorly observed.
 In addition, the observational record is quite short, which makes it more difficult to use these observations to study what controls variation in the eddy field.
@@ -122,7 +122,7 @@ We conclude that the Southern Ocean eddy field is dominated by intrinsic chaotic
 
 The Southern Ocean is unique in the global ocean; it is the one region without continents on its zonal boundaries, giving rise to the Antarctic Circumpolar Current (ACC) which flows eastward around the globe.
 The ACC acts to connect the other major basins and thereby regulates climate and nutrients.
-The Southern Ocean region is also a place where mid- and high-latitude ventilation of the oceans occurs, leading to carbon and heat uptake and controlling deep ocean stratification.
+The Southern Ocean region is also a place where mid- and high-latitude ventilation of the oceans occurs, leading to carbon and heat uptake and controlling deep ocean stratification (Morrison et al. Submitted) \citep{Rousselet2021}.
 However, the Southern Ocean is also poorly observed (compared with other ocean basins) and it's unique properties mean that understanding the dynamics (with the aim of predicting future responses to climate change) need to be urgently constrained.
 
 Another unique feature of the Southern Ocean is that it has a strong eddy field \citep{Fu2010}.
@@ -157,18 +157,19 @@ This variability is examined on a circumpolar and regional basis, to better unde
 
 \subsection{The OCCIPUT ensemble}
 
-The methodology employed in this study is derived from the probabilistic approach to ocean modelling outinlined by \citet{Bessieres2017}.
+The methodology employed in this study is derived from the probabilistic approach to ocean modelling outlined by \citet{Bessieres2017}.
 We use output from the OCCIPUT (oceanic chaos – impacts, structure, predictability) ensemble of 50 eddy-permitting ocean model simulations, run in lock-step \citep{Leroux2018}.
 This ensemble is based on the DRAKKAR-ORCA025 \citep[e.g.][]{Barnier2006} implementation of the NEMO modelling system \citep{Madec2012}.
 The ensemble incorporates ocean-sea ice hindcast simulations for the period 1960-2015.
+We regard the first 20 years of this ensemble as being a spinup period, over which the ensemble members diverge, and analyse the period 1980-2015.
 The ensemble uses the DRAKKAR Forcing Set DFS5.2 (Dussin 2016) with  0.25$^\circ$ lateral resolution and 75 vertical levels.
 
-\andycomment{Thierry could add more if needed?}
+\andycomment{Thierry could add more or fix errors if needed?}
 
 
 \subsection{Estimating geostrophic eddy velocity}
 For each ensemble member, the sea surface height, $\eta_i$, is saved as a 5-daily average (where $i$ represents the ensemble member) . 
-The sea level anomaly, $\eta_i'$ is calculated as the transient component of sea level, given by 
+The sea level anomaly, $\eta_i'$, is calculated as the transient component of sea level, given by 
 \begin{linenomath*}
 \begin{equation}
 \eta_i' = \eta_i - \overline{\eta_i}
@@ -236,7 +237,7 @@ R_i =  \frac{\overline{\epsilon^2}}{\overline{\epsilon^2} + \sigma^2_{\langle E 
 When $R_i$ approaches unity, the system is dominated by intrinsic variability, and at the limit  of $R_i \to 0$ the system is solely responding to forced variability induced by atmospheric forcing.
 
 To examine the relationship between the EKE (of either the ensemble mean, or from individual ensemble members) we are guided by previous work which emphasises the role of wind stress in governing the eddy variability at different timescales \citep[e.g.][]{Hogg2015, Sinha2016}.
-Thus, we look at the correlation coefficient, $r$, at a range of lags between the EKE and the wind stress $\tau$ (which is identical for all ensemble members).
+Thus, we look at the correlation coefficient, $r$, at a range of lags between the wind stress $\tau$ (which is identical for all ensemble members) and EKE.
 For each correlation we evaluate the statistical significance of the correlation \citep[following, e.g.][]{Santer2000}.
 We first calculate the effective sample size, $N_e$, where
 \begin{linenomath*}
@@ -251,7 +252,7 @@ We use the Students t-test to infer statistical significance (at the 95\%-level)
 T = \frac{r \sqrt{N_e}}{\sqrt{1-r^2}} > 2.
 \end{equation}
 \end{linenomath*}
-
+Lagged correlation estimates indicate when this significance test is satisfied.
 
 \section{Results}
 
@@ -264,7 +265,7 @@ The patterns of EKE in this model broadly match the regional variations of EKE o
 \begin{figure}[ht]
 \begin{center}
 \includegraphics[width=\hsize]{Figure1}
-\caption{(a) Snapshot (5-day average) from a single ensemble member showing Southern Ocean EKE, $E_i$, and (b) tome-averagedensemble mean EKE, $\overline{\langle E_i\rangle}$.  }
+\caption{(a) Snapshot (5-day average) from a single ensemble member showing Southern Ocean EKE, $E_i$, and (b) time-averaged ensemble mean EKE, $\overline{\langle E_i\rangle}$.  }
 \label{Fig:1}
 \end{center}
 \end{figure}
@@ -295,7 +296,7 @@ Thus, there appear to be two distinct timescales of response of the Southern Oce
 \begin{figure}[t]
 \begin{center}
 \includegraphics[width=\hsize]{Figure3}
-\caption{Eddy kinetic energy statistics within sub-regions of the Southern Ocean. (a) Map showing Ensemble Mean EKE, along with 3 boxes over which a regional EKE analysis is applied; (b) Regional analysis of the Southeast Indian Ocean showing ensemble mean EKE in cyan, individual ensemble members EKE in grey and local wind stress averaged over the region in black; (c) Lagged correlation of ensemble mean EKE in each of the three regions; (d) Regional analysis of the Southwest Pacific Ocean showing ensemble mean EKE in red, individual ensemble members EKE in grey and local wind stress averaged over the region in black; and (3) Regional analysis of the South Atlantic Ocean showing ensemble mean EKE in orange, individual ensemble members EKE in grey and local wind stress averaged over the region in black. The fraction of intrinsic variance in each region is shown in the caption of panels (b), (d) and (e).}
+\caption{Eddy kinetic energy statistics within sub-regions of the Southern Ocean. (a) Map showing Ensemble Mean EKE, along with 3 boxes over which a regional EKE analysis is applied; (b) Regional analysis of the Southeast Indian Ocean showing ensemble mean EKE in cyan, individual ensemble members EKE in grey and local wind stress averaged over the region in black; (c) Lagged correlation of ensemble mean EKE in each of the three regions; (d) Regional analysis of the Southwest Pacific Ocean showing ensemble mean EKE in red, individual ensemble members EKE in grey and local wind stress averaged over the region in black; and (c) Regional analysis of the South Atlantic Ocean showing ensemble mean EKE in orange, individual ensemble members EKE in grey and local wind stress averaged over the region in black. The fraction of intrinsic variance in each region is shown in the caption of panels (b), (d) and (e).}
 \label{Fig:3}
 \end{center}
 \end{figure}
@@ -311,7 +312,7 @@ This region is characterised by high-frequency ($\sim$1 year) variations in EKE,
 The forced variation is clearly evident in the timeseries of  individual ensemble members; and this forced component is related to wind stress.
 The lag between wind stress variations and ensemble mean EKE is short ($\sim$ 5 months; Fig.~\ref{Fig:3}c) with a single clear  and significant peak in the lagged correlation.
 There is a second, weaker but significant, correlation at 30 months lag.
-This region highlights a regime in which the eddy field responds rapidly to variations in the local wind stress.
+This region highlights a regime in which the eddy field primarily responds rapidly to variations in the local wind stress.
 
 In the Southeast Pacific Ocean (red box in Fig.~\ref{Fig:3}a) the situation is clearly different.
 Here, the intrinsic variance fraction is larger than the Southeast Indian Ocean ($R_i=0.78$) and the timescale of the variability is much longer; there is no significant response to wind stress variations which occur at sub-annual scales (Fig.~\ref{Fig:3}d).
@@ -320,7 +321,7 @@ Thus, this region varies slowly and consistently to multi-year variations in win
 
 In the South Atlantic Ocean (orange box in Fig.~\ref{Fig:3}a) the system is again dominated by intrinsic variance ($R_i=0.74$) and is poorly correlated with wind stress forcing (Fig.~\ref{Fig:3}c,e), reinforcing the circumpolar variability of the EKE response to wind.
 Other regions (see Fig. \ref{Fig:4}) highlight different aspects of the response;  with almost no correlation with wind forcing over the Central South Pacific ( Fig. \ref{Fig:4}b) or the Southwest Indian Ocean  (the Agulhas meander region; Fig. \ref{Fig:4}e).
-In both of these regions, intrinsic variability dominates the signal and correlations are weak and insignificant
+In both of these regions, intrinsic variability dominates the signal and correlations are weak and insignificant. 
 On the other hand, the Southeast Pacific (north of the main pathway of the ACC) shows a strong and coherent multi-year response to wind stress, with smaller intrinsic variance fraction and a peak lag at 30 months.
 It is notable that this region, which is north of the mean ACC pathway, has a weak EKE signal (one tenth the magnitude of the core of the ACC).
 The circumpolar variation in both EKE response times and intrinsic variability suggests that the two-timescale response seen in Fig. \ref{Fig:2} may be created by different processes, which each dominate in different regions of the Southern Ocean.
@@ -350,16 +351,16 @@ The existence of multi-year lags between the wind and the EKE suggests that loca
 To investigate this question we now take each of the regions outlined in Fig. \ref{Fig:3} and look at the spatial correlation between wind stress and the local ensemble mean EKE (Fig. \ref{Fig:5}).
 To make this calculation, wind stress is first coarsened to a 4$^\circ \times $4$^\circ$ grid, and wind stress in each of those coarsened grid cells correlated with EKE at different lags.
 In the Southeast Indian Ocean, Fig.~\ref{Fig:3}(c) shows correlation maxima at 5 months and 30 months; the spatial variation of this correlation is shown in Fig. \ref{Fig:5}(a,b) respectively.
-These figures highlight a key feature of Southern Ocean wind stress, which is that there are strong correlations between wind stress at a given latitude; nonetheless, the maximum correlation between wind stress and EKE occurs within the EKE-averaging region.
+These figures highlight a key feature of Southern Ocean wind stress, which is that there are strong autocorrelations between wind stress along a line of latitude; nonetheless, the maximum correlation between wind stress and EKE occurs within the EKE-averaging region.
 This correlation is lower in magnitude at 30 months (consistent with Fig.~\ref{Fig:3}c), but at both 5 and 30 month lags the correlation with wind upstream of the EKE-averaging region is not stronger than within the EKE-averaging region.
 A similar result is found in the Southwest Pacific Ocean (Fig.~\ref{Fig:5}c); wind stress correlations are relatively uniform across the Pacific Ocean owing the autocorrelation of winds, but the correlations are less circumpolar than the Southeast Indian Ocean.
 Importantly, there is no suggestion of a strong correlation with wind stress upstream of the EKE-averaging region.
-In the South Atlantic, the EKE is not strongly correlated with wind stress, either in the local region or elsewhere in the Southern Ocean (Fig.~\ref{Fig:5}d);
+In the South Atlantic, the EKE is not strongly correlated with wind stress, either in the local region or elsewhere in the Southern Ocean (Fig.~\ref{Fig:5}d).
 Thus, these spatial maps demonstrate that, where strong forced variability in the EKE exists, it is most strongly linked to local wind stress, with no suggestion of upstream or remote wind input playing a strong role. 
 
 \section{Discussion and Conclusions}
 The simulations shown here advocate for a probabilistic approach to understanding the Southern Ocean eddy field.
-The 50-member ensemble of eddy-permitting ocean-sea ice model simulations investigated here demonstrate that inference about the EKE response of a single ensemble member to variable forcing is not robust, consistent with the inference of \citet{Zhang2021}.
+The 50-member ensemble of eddy-permitting ocean-sea ice model simulations investigated here demonstrate that inference about the EKE response of a single ensemble member to variable forcing in a localised region is not robust, consistent with the inference of \citet{Zhang2021}.
 This point is clarified in Fig.~\ref{Fig:6} which shows a map of the intrinsic fraction of variance, $R_i$, from eddy statistics interpolated onto a coarse 5$^\circ \times$5$^\circ$ grid.
 Here, the intrinsic variance is close to unity over most of the band of elevated EKE in the Southern Ocean. 
 Subpanels (b) and (c) confirm the predominance of intrinsic eddy variability at this scale, highlighting that at small scales we can place little reliability on the results from an individual ensemble member.
@@ -377,7 +378,7 @@ For example, in the Southeast Indian Ocean, in the lee of the Kerguelen Plateau,
 On the other hand, slower but significant responses in EKE are found in the Southwest Pacific Ocean, near Campbell Plateau (Fig.~\ref{Fig:3}).
 Both of these regions are locations where topography acts to sharpen and energise fronts.
 However, in many other regions, EKE variability appears to be almost entirely due to intrinsic processes.
-This heterogeneity, consistent with \citet{Patara2016}, acts to emphasise the differing flow regimes which are found in different parts of the Southern Ocean.
+This heterogeneity, consistent with the findings of \citet{Patara2016}, acts to emphasise the differing flow regimes which are found in different parts of the Southern Ocean.
 
 Averaged over the entire Southern Ocean two significant timescales of correlation are found between wind stress and EKE: one at 4 months, and the other at $\sim$30 months.
 The rapid timescale is the expected Ekman response, in which wind stress tilts isopycnals to store available potential energy, which is then released to EKE through baroclinic instability \citep[e.g.][]{Sinha2016}.
@@ -386,14 +387,15 @@ The slower timescale is similar to that proposed by \citet{Meredith2006}, based 
  
 The ensemble approach thus leads to the conclusion that eddy processes in the Southern Ocean include a large component of intrinsic variability, even when averaged over a large spatial area.
 This result argues for caution in interpreting observations of Southern Ocean eddies, which are necessarily based on a single, short realisation of the natural world.
-Given that eddies are critical for the Southern Ocean circulation, this result implies that predictability of the future Southern Ocean will be more difficult to realise than previously thought.
+Given that eddies are critical for the Southern Ocean circulation, this result implies that predictability of the future Southern Ocean may be weaker than previously thought.
 It also highlights the difficulty faced in distinguishing the processes that govern eddy dynamics in this system, and point to more systematic eddy identification and modelling studies to better isolate these processes.
  
 
 
 \acknowledgments
 This research was undertaken with the assistance of resources and services from the National Computational Infrastructure (NCI), which is supported by the Australian Government.
-AMH is gratefully to the support of 
+AMH is gratefully to the MEOM team at ICE, Universit{\'e} Grenoble Alpes, who supported his sabbatical and which led to this work.
+
 \andycomment{Thierry, please add OCCIPUT acknowledgements}
 
 \bibliography{references}
