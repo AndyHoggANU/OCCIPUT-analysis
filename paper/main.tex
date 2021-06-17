@@ -18,7 +18,17 @@
 \newcommand{\mathbfit}[1]{\textbf{\textit{\textsf{#1}}}}
 \usepackage{amsfonts, amssymb, amsmath}
 \usepackage[labelfont=bf]{caption}
-% \usepackage{doi}
+
+\hypersetup{
+	breaklinks,
+	colorlinks=true,
+	linkcolor=Blue,
+  urlcolor=Purple,
+	citecolor=Purple,
+%	allcolors=black,
+ }
+
+ \usepackage{doi}
 
 \usepackage{comment}
 
@@ -69,14 +79,14 @@
 
 \begin{document}
 \justify
-\title{Circumpolar variations in Southern Ocean eddy dynamics:\\An ensemble approach}
+\title{Circumpolar variations in Southern Ocean eddy dynamics: insights from an ensemble modelling approach}
 
 \authors{
 Andrew McC. Hogg\affil{1}, Thierry Penduff\affil{2}, Sally E. Close\affil{3}, William K. Dewar\affil{4},\\Navid C. Constantinou\affil{1}\quad and\quad Josu{\'e} Mart{\'i}nez Moreno\affil{1}
 }
 
-\affiliation{1}{Research School of Earth Sciences and ARC Centre of Excellence for Climate Extremes,\\ Australian National University, Australia}
-\affiliation{2}{Universit{\'e} Grenoble Alpes, CNRS, IRD, Grenoble-INP, IGE, Grenoble, France}
+\affiliation{1}{Research School of Earth Sciences and ARC Centre of Excellence for Climate Extremes,\\ Australian National University, Canberra, Australia}
+\affiliation{2}{Universit{\'e} Grenoble Alpes, CNRS, IRD, Grenoble-INP, Institut des G{\'e}osciences de l'Environnement (IGE), Grenoble, France}
 \affiliation{3}{Institut des Géosciences de l'Environnement, CNRS/Univ. Grenoble Alpes/G-INP/IRD, France}
 \affiliation{3}{Florida State University, Tallahassee, FL, USA}
 
@@ -92,11 +102,11 @@ Andrew McC. Hogg\affil{1}, Thierry Penduff\affil{2}, Sally E. Close\affil{3}, Wi
 Circulation in the Southern Ocean is unique.
 The strong wind stress forcing and buoyancy fluxes, in concert with the lack of continental boundaries, conspire to drive the Antarctic Circumpolar Current replete with an intense eddy field.
 The effect of Southern Ocean eddies on the ocean circulation is significant -- they modulate the momentum balance of the zonal flow, and the meridional transport of tracers and mass.
-The strength of the eddy field is controlled by a combination of forcing (primarily thought to be wind stress) and intrinsic variability associated with the turbulent flow field itself.
+The strength of the eddy field is controlled by a combination of forcing (primarily thought to be wind stress) and intrinsic variability associated with the turbulent flow field itself.\footnote{{\color{red}Thierry: I agree, but some studies (e.g. Colin de Verdiere \& Huck 1999, Huck et al 2015) have mentioned that non-eddying ocean models can also produce (a small amount of) intrinsic variability via large-scale baroclinic instability. Need to mention?}}
 Here, we present results from an eddy-permitting ensemble of ocean model simulations to investigate the relative contribution of forcing and intrinsic processes in governing the variability of Southern Ocean eddy kinetic energy.
 We find that intrinsic processes dominate the eddy field.
 Where correlations between the forcing and the eddy field exist, these interactions are dominated by two distinct timescales -- a fast baroclinic instability response; and a multi-year process owing to feedback between bathymetry and the mean flow.
-These results suggest that understanding Southern Ocean eddy dynamics requires an ensemble approach to eliminate intrinsic variability, and therefore may not yield robust conclusions from observations alone.
+These results suggest that understanding Southern Ocean eddy dynamics and its larger-scale impacts requires an ensemble approach to eliminate intrinsic variability, and therefore may not yield robust conclusions from observations alone.
 
 \noindent \textbf{Plain language summary} \\
 \noindent The Southern Ocean is the most turbulent part of the world's oceans.
@@ -122,19 +132,19 @@ We conclude that the Southern Ocean eddy field is dominated by intrinsic chaotic
 
 The Southern Ocean is unique in the global ocean; it is the one region without continents on its zonal boundaries, giving rise to the Antarctic Circumpolar Current (ACC) which flows eastward around the globe.
 The ACC acts to connect the other major basins and thereby regulates climate and nutrients.
-The Southern Ocean region is also a place where mid- and high-latitude ventilation of the oceans occurs, leading to carbon and heat uptake and controlling deep ocean stratification (Morrison et al. Submitted) \citep{Rousselet2021}.
+The Southern Ocean region is also a place where mid- and high-latitude ventilation of the oceans occurs, leading to carbon and heat uptake and controlling deep ocean stratification \citep{Rousselet2021, Morrison2021}.
 However, the Southern Ocean is also poorly observed (compared with other ocean basins) and it's unique properties mean that understanding the dynamics (with the aim of predicting future responses to climate change) need to be urgently constrained.
 
 Another unique feature of the Southern Ocean is that it has a strong eddy field \citep{Fu2010}.
 This strong eddy field has suggested to be important in the Southern Ocean's response to change.
-For example, the eddy saturation hypothesis \citep{Hallberg2006, Meredith2006, Munday2013, Constantinou2019} suggests that the role of eddies in facilitating vertical momentum transport acts to limit the response of ACC transport to changing winds.
+For example, the eddy saturation hypothesis \citep{Hallberg2006, Meredith-Hogg-2006, Munday2013, Constantinou2019} suggests that the role of eddies in facilitating vertical momentum transport acts to limit the response of ACC transport to changing winds.
 A similar dynamics, known as eddy compensation, describes the role of eddies in moderating the effect of wind-driven change on the Southern Ocean overturning circulation \citep{Morrison2013a}.
 Therefore, the response of fine scale transient motion in the Southern Ocean is likely important to characterising the dynamics of this region.
 
 The strength of the Southern Ocean eddy field is usually characterised by extracting the kinetic energy of transient motions; referred to by oceanographers as eddy kinetic energy (EKE). 
 It is important to highlight that EKE includes all transient motion, not just coherent vortices \citep{Martinez-Moreno2019}, and thus care needs to be taken in interpreting this metric.
 Eddy kinetic energy has a complex relationship with the forces that drive the ocean circulation.
-\citet{Meredith2006} found significant variations in the area-averaged eddy field in some regions, and argued for a 2-3 year lag between events in wind stress forcing and EKE anomalies.
+\citet{Meredith-Hogg-2006} found significant variations in the area-averaged eddy field in some regions, and argued for a 2-3 year lag between events in wind stress forcing and EKE anomalies.
 \citet{Patara2016}, using a realistic high-resolution ocean model found that EKE does have a lagged response to wind stress anomalies, but that this relationship is variable around the Southern Ocean.
 Idealised models over a wide range of parameter space \citep{Sinha2016} have highlighted that the timescale of the perturbation is critical in determining the EKE response, with shorter perturbations having a faster, Ekman-related response.
 Thus, current knowledge suggests that there is a relationship between wind forcing and the Southern Ocean, but that the nature of this relationship, and the role of intrinsic variability, need to be clarified.
@@ -195,7 +205,7 @@ E_i = \frac{1}{2}(u_i'^2 + v_i'^2)
 \end{equation}
 \end{linenomath*}
 and subsampled at monthly temporal resolution.
-It is notable that $E_i$ contains a large component of seasonal variation (Mart\`inez-Moreno et al. 2021, submitted) which dominates the statistics.
+It is notable that $E_i$ contains a large component of seasonal variation \citep{Martinez-Moreno2021} which dominates the statistics.
 To look at the forced response, we therefore deseasonalise $E_i$, by removing the climatological mean for each month.
 We then proceed to compute ensemble statistics from this deseasonalised EKE.
 
@@ -382,8 +392,8 @@ This heterogeneity, consistent with the findings of \citet{Patara2016}, acts to 
 
 Averaged over the entire Southern Ocean two significant timescales of correlation are found between wind stress and EKE: one at 4 months, and the other at $\sim$30 months.
 The rapid timescale is the expected Ekman response, in which wind stress tilts isopycnals to store available potential energy, which is then released to EKE through baroclinic instability \citep[e.g.][]{Sinha2016}.
-The slower timescale is similar to that proposed by \citet{Meredith2006}, based on the single large Southern Ocean wind event in 1999.
- This timescale is consistent with the  topographic feedback mechanism of \citet{Hogg2006}, in which a delayed amplification of the EKE response can occur through the topographic steering of currents away from the zonal direction, which decreases the stability of the current.
+The slower timescale is similar to that proposed by \citet{Meredith-Hogg-2006}, based on the single large Southern Ocean wind event in 1999.
+This timescale is consistent with the  topographic feedback mechanism of \citet{Hogg-Blundell-2006}, in which a delayed amplification of the EKE response can occur through the topographic steering of currents away from the zonal direction, which decreases the stability of the current.
  
 The ensemble approach thus leads to the conclusion that eddy processes in the Southern Ocean include a large component of intrinsic variability, even when averaged over a large spatial area.
 This result argues for caution in interpreting observations of Southern Ocean eddies, which are necessarily based on a single, short realisation of the natural world.
