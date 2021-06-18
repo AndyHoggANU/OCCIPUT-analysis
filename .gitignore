@@ -283,3 +283,5 @@ TSWLatexianTemp*
 
 # Mac OS
 *.DS_store
+
+paper/main.pdf
