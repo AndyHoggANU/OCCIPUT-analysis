@@ -160,17 +160,17 @@ Eddy kinetic energy has a complex relationship with the forces that drive the oc
 \citet{Meredith-Hogg-2006} found significant variations in the area-averaged eddy field in some regions, and argued for a 2-3 year lag between events in wind stress forcing and EKE anomalies.
 \citet{Patara2016}, using a realistic high-resolution ocean model found that EKE does have a lagged response to wind stress anomalies, but that this relationship is variable around the Southern Ocean.
 Idealised models over a wide range of parameter space \citep{Sinha2016} have highlighted that the timescale of the perturbation is critical in determining the EKE response, with shorter perturbations having a faster, Ekman-related response.
-Thus, current knowledge suggests that there is a relationship between wind forcing and the Southern Ocean, but that the nature of this relationship, and the role of intrinsic variability, need to be clarified.\footnote{{\color{red}Thierry: the notion of intrinsic variability could be introduced a bit more before this, explaining for instance that it emerges frrom oceanic non-linearities under constant or seasonal forcing and persists under variable forcing (Leroux et al 2018), it has a random phase (``chaotic'' character), it mostly emerges at mesoscale and can cascade toward interannual to decadal time scales and O(1000km) space scales (Serazin et al 2018).}}
+Thus, current knowledge suggests that there is a relationship between wind forcing and the Southern Ocean, but that the nature of this relationship, and the role of intrinsic variability, need to be clarified.\footnote{{\color{red}Thierry: the notion of intrinsic variability could be introduced a bit more before this, explaining for instance that it emerges frrom oceanic non-linearities under constant or seasonal forcing and persists under variable forcing \citep{Leroux2018}, it has a random phase (``chaotic'' character), it mostly emerges at mesoscale and can cascade toward interannual to decadal time scales and O(1000$\,$km) space scales \cite{Serazin-etal-2018}.}}
 
-On longer timescales it has also been proposed that EKE has increased over recent decades \citep{Hogg2015, Martinez-Moreno2019}.
-The robustness of this wind-EKE relationship in the Southern Ocean was recently investigated by \citet{Zhang2021}, who used crossover data from satellite observations \citep[as in][]{Hogg2015} to better estimate the EKE on regional scales. 
+On longer timescales it has also been proposed that EKE has increased over recent decades \citep{Hogg2015, Martinez-Moreno2019, Martinez-Moreno2021-ncc}.
+The robustness of this wind-EKE relationship in the Southern Ocean was recently investigated by \citet{Zhang2021}, who used crossover data from satellite observations \citep[as in][]{Hogg2015} to better estimate the EKE on regional scales.
 When fine graining these calculations it was found that only a single region (30$^\circ$ in longitude) expressed a significant long-term trend in EKE.
 This finding  suggests that previous characterisations of the response may have been dominated by a small number of regional events, and that at other times the intrinsic variance may dominate the signal.
 
 Thus, despite the proposed importance of the Southern Ocean eddy field to ocean circulation, the nature of the EKE variability remains unclear.
 A primary complication is what can be inferred from an admittedly short satellite record; in particular, whether individual events can be attributed to forcing changes, or to intrinsic variability, or a combination of the two.
 In this paper, we address this question by examining the intrinsic variability of the Southern Ocean eddy field in an ensemble of eddy-permitting ocean simulations.
-We use the OCCIPUT ensemmble of global ocean/sea-ice hindcast simulations \citep{Penduff-etal-2014, Leroux2018}, a 50-member ensemble of hindcast simulations.
+We use the OCCIPUT ensemble of global ocean/sea-ice hindcast simulations \citep{Penduff-etal-2014, Leroux2018}, a 50-member ensemble of hindcast simulations\footnote{{\color{blue}Sally: The definition of OCCIPUT perhaps need to be moved up here from the paragraph below?}}.
 We examine both the intrinsic variance of the eddy field, and extract the ``forced'' (ensemble mean) component of the variability.
 This variability is examined on a circumpolar and regional basis, to better understand the regional differences and processes which contribute to the eddy field.
 
@@ -181,25 +181,26 @@ This variability is examined on a circumpolar and regional basis, to better unde
 \subsection{The OCCIPUT ensemble}
 
 The methodology employed in this study is derived from the probabilistic approach to ocean modelling outlined by \citet{Bessieres2017}.
-We use output from the OCCIPUT (OceaniC Chaos – ImPacts, strUcture, predicTability) ensemble of 50 eddy-permitting global ocean--sea ice simulations, based on the ORCA025 implementation \citep[e.g.][]{Barnier2006} of the NEMO modelling system \citep{Madec2012}. 
+We use output from the OCCIPUT (OceaniC Chaos – ImPacts, strUcture, predicTability) ensemble of 50 eddy-permitting global ocean--sea ice simulations, based on the ORCA025 implementation \citep[e.g.][]{Barnier2006} \footnote{{\color{blue}Sally: I think there's a problem in the bibtex file here: the citation seems to be coming up as Bernard instead of Barnier}}of the NEMO modelling system \citep{Madec2012}. 
 The model grid has a 1/4$^\circ$ horizontal resolution and 75 geopotential levels. We employ the probabilistic ocean modelling approach outlined by \citet{Bessieres2017}: \emph{(i)}~the 50 ensemble members are initialized in 1960 from a one-member 21-year spinup; \emph{(ii)}~the ensemble spread is seeded by activating a stochastic perturbation \citep{Brankart-etal-2015} during one year in 1960, which is shut off afterwards; \emph{(iii)}~the 50 ensemble members are driven between 1960 and 2015 by the same realistic atmospheric forcing function based on the ERA-40 and ERA-Interim reanalyses (Drakkar Forcing Set DFS5.2; \citet{Dussin-etal-2016}); the wind stress is computed without ocean current feedbacks, hence ensuring that the same momentum fluxes are applied to all members. 
 We focus our analyses on the period 1980-2015, thus yielding an effective spinup duration of 41 years in each member. 
 
 
 \subsection{Estimating geostrophic eddy velocity}
-For each ensemble member, the sea surface height, $\eta_i$, is saved as a 5-daily average (where $i$ represents the ensemble member) . 
+For each ensemble member, the sea surface height, $\eta_i$, is saved as a 5-daily average (where $i$ represents the ensemble member) . {\color{blue} Sally: For each ensemble member, the member's global mean sea level anomaly is subtracted from all grid points at every time step to correct for spurious terms introduced by the use of the Boussinesq approximation \citep{Greatbatch1994}. The model drift, which is potentially nonlinear, is then corrected for by detrending using a LOWESS filter \citep{Cleveland1979} in combination with a 5th-order spline; full details of this preprocessing may be found in \citep{Close2020}.}
+
 The sea level anomaly, $\eta_i'$, is calculated as the transient component of sea level, given by 
 \begin{linenomath*}
 \begin{equation}
-\eta_i' = \eta_i - \overline{\eta_i}
+\eta_i' = \eta_i - \overline{\eta_i},
 \end{equation}
 \end{linenomath*}
-where $\overline{\cdot}$ represents the temporal average over the simulation.
+where $\overline{\cdot}$ represents the temporal average\footnote{{\color{blue}Sally: see above: instead of the temporal average it's the nonlinear trend that's removed}} over the simulation.
 The sea level anomaly is detrended, and then used to calculate the eddy velocity field.
 Surface eddy velocity in each ensemble member, $\mathbf{u}_i' = (u_i', v_i')$ is estimated from the detrended sea level anomaly via the geostrophic relation,
 \begin{linenomath*}
 \begin{equation}
-u_i' = - \frac{g}{f} \frac{\partial \eta_i'}{\partial y}; \quad v_i' = \frac{g}{f} \frac{\partial \eta_i'}{\partial x}
+u_i' = - \frac{g}{f} \frac{\partial \eta_i'}{\partial y} \quad \text{and} \quad v_i' = \frac{g}{f} \frac{\partial \eta_i'}{\partial x},
 \end{equation}
 \end{linenomath*}
 where $g$ is the acceleration due to gravity and $f$ is the local Coriolis parameter.
@@ -210,7 +211,7 @@ Anomalous values of $\mathbf{u}_i'$ close to coastlines are removed.
 The surface eddy kinetic energy for each ensemble member is calculated as 
 \begin{linenomath*}
 \begin{equation}
-E_i = \frac{1}{2}(u_i'^2 + v_i'^2)
+E_i = \frac{1}{2}(u_i'^2 + v_i'^2),
 \end{equation}
 \end{linenomath*}
 and subsampled at monthly temporal resolution.
@@ -243,7 +244,7 @@ which represents the variance of the forced eddy response.
 Analogously, the intrinsic variance emerges from the variance,
 \begin{linenomath*}
 \begin{equation}
-\epsilon^2(t) = \frac{1}{N} \sum_{i=1}^N E_i'(t)^2
+\epsilon^2(t) = \frac{1}{N} \sum_{i=1}^N E_i'(t)^2,
 \end{equation}
 \end{linenomath*}
 indicating the spread of each member from the ensemble mean.
@@ -261,7 +262,7 @@ For each correlation we evaluate the statistical significance of the correlation
 We first calculate the effective sample size, $N_e$, where
 \begin{linenomath*}
 \begin{equation}
-N_e \equiv N \frac{1-r_1 r_2}{1+r_1 r_2}
+N_e \equiv N \frac{1-r_1 r_2}{1+r_1 r_2},
 \end{equation}
 \end{linenomath*}
 where $N$ is the total number of samples (444 months for this timeseries), $r_1$ is the lag-1 autocorrelation for EKE and $r_2$ is the lag-2 autocorrelation for wind stress.
@@ -284,7 +285,7 @@ The patterns of EKE in this model broadly match the regional variations of EKE o
 \begin{figure}[ht]
 \begin{center}
 \includegraphics[width=\hsize]{Figure1}
-\caption{(a) Snapshot (5-day average) from a single ensemble member showing Southern Ocean EKE, $E_i$, and (b) time-averaged ensemble mean EKE, $\overline{\langle E_i\rangle}$.  }
+\caption{(a) Snapshot (5-day average) from a single ensemble member showing Southern Ocean EKE, $E_i$, and (b) time-averaged ensemble mean EKE, $\overline{\langle E_i\rangle}$.}
 \label{Fig:1}
 \end{center}
 \end{figure}
