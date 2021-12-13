@@ -78,8 +78,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 0) Bringing in packages that we will need:
 
+\RequirePackage{hyperref}
+
 %% Nicer font choice than Computer Modern:
-%\RequirePackage{newtxtext,newtxmath}
+% \RequirePackage{newtxtext,newtxmath}
 
 %% always will want this available
 \RequirePackage{graphicx}
@@ -88,7 +90,7 @@
 \setkeys{Gin}{draft=false}
 
 %% xcolor.sty
-\RequirePackage{xcolor}
+\RequirePackage[usenames,dvipsnames]{xcolor}
 \RequirePackage{url}
 
 %% for better track changes
