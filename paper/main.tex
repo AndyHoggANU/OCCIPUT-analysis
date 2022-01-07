@@ -73,13 +73,13 @@ These results suggest that understanding Southern Ocean eddy dynamics and its la
 
 \noindent \textbf{Plain language summary} \\
 \noindent The Southern Ocean is the most turbulent part of the world's oceans.
-The variation of this turbulence, which is often referred to as \emph{eddies}, is critical to understanding the evolution of the Southern Ocean under climate change.
+This turbulence, often referred to as \emph{eddies}, is critical to the evolution of the Southern Ocean under climate change.
 But it's hard to get information about these eddies, because they occur on small scales in a large ocean basin that is poorly observed.
-In addition, the observational record is quite short, which makes it more difficult to use these observations to study what controls variation in the eddy field.
+In addition, the observational record is quite short, which makes it more difficult to use these observations to study what controls variations of these eddies.
 For this reason, we take an eddy-permitting ocean model, and run it 50 times with the same forcing (but a slightly different initial state).
 The chaotic nature of the turbulent ocean means that these model runs exhibit different evolutions.
-We thus use these simulations to study which eddy processes are intrinsic (that is, a consequence of the chaotic nature of turbulence) and which are forced by the external factors that are common to all experiments (such as wind stress).
-We conclude that the Southern Ocean eddy field is dominated by intrinsic chaotic processes; but that the forced variability responds to wind on particular timescales that are controlled by the mechanisms that generate ocean turbulence. 
+Then we use these simulations to study which eddy processes occur as a consequence of the chaotic nature of turbulence and which are forced by the external factors that are common to all model runs (such as wind stress).
+We conclude that the Southern Ocean eddy field is dominated by chaotic processes; but that the forced variability responds to wind on particular timescales that are controlled by the mechanisms that generate ocean turbulence. 
 \end{abstract}
 
 
@@ -92,7 +92,7 @@ We conclude that the Southern Ocean eddy field is dominated by intrinsic chaotic
 
 \section{Introduction}
 
-The Southern Ocean is unique in the global ocean; it is the one region without continents on its zonal boundaries, giving rise to the Antarctic Circumpolar Current (ACC) which flows eastward around the globe.
+The Southern Ocean is unique in the global ocean; it is the one region without continents on its zonal boundaries, giving rise to the Antarctic Circumpolar Current (ACC) that flows eastward around the globe.
 The ACC acts to connect the other major basins and thereby regulates climate and nutrients.
 The Southern Ocean region is also a place where mid- and high-latitude ventilation of the oceans occurs, leading to carbon and heat uptake and controlling deep ocean stratification \citep{Rousselet2021, Morrison2022}.
 However, the Southern Ocean is also poorly observed (compared with other ocean basins) and its unique properties mean that the dynamics of this region (with the aim of predicting future responses to climate change) need to be urgently constrained.
@@ -106,19 +106,19 @@ Therefore, the response of fine scale transient motion in the Southern Ocean is 
 The strength of the Southern Ocean eddy field is usually characterised by extracting the kinetic energy of transient motions; referred to by oceanographers as eddy kinetic energy (EKE). 
 It is important to highlight that EKE includes all transient motion, not just coherent vortices \citep{Martinez-Moreno2019}, and thus care needs to be taken in interpreting this metric.
 Eddy kinetic energy has a complex relationship with the forces that drive the ocean circulation.
-\citet{Meredith-Hogg-2006} found significant variations in the area-averaged eddy field in some regions, and argued for a 2-3 year lag between events in wind stress forcing and EKE anomalies.
+\citet{Meredith-Hogg-2006} found significant variations in the area-averaged eddy field in some regions, and argued for a 2-3 year lag between wind stress forcing variations and EKE anomalies that follow.
 \citet{Patara2016}, using a realistic high-resolution ocean model found that EKE does have a lagged response to wind stress anomalies, but that this relationship varies in strength around the Southern Ocean.
-Idealised models over a wide range of parameter space \citep{Sinha2016} have highlighted that the timescale of the perturbation is critical in determining the EKE response, with shorter perturbations having a faster, Ekman-related response.
+Idealised model studies over a wide range of parameter space \citep{Sinha2016} have highlighted that the timescale of the perturbation is critical in determining the EKE response, with shorter perturbations having a faster, Ekman-related response.
 Thus, current knowledge suggests that there is a relationship between wind forcing and the Southern Ocean, but that the nature of this relationship needs to be clarified.
 
-On longer timescales it has also been proposed that EKE has increased over recent decades \citep{Hogg2015, Martinez-Moreno2019, Martinez-Moreno2021-ncc}.
+On longer timescales, it has also been proposed that EKE has increased over recent decades \citep{Hogg2015, Martinez-Moreno2019, Martinez-Moreno2021-ncc}.
 The robustness of this wind-EKE relationship in the Southern Ocean was recently investigated by \citet{Zhang2021}, who used crossover data from satellite observations \citep[as in][]{Hogg2015} to better estimate the EKE on regional scales.
-When fine-graining these calculations it was found that only a single region (30$^\circ$ in longitude) expressed a significant long-term trend in EKE.
+By fine-graining these calculations it was found that only a single region (30$^\circ$-wide in longitude) expressed a significant long-term trend in EKE.
 This finding  suggests that previous characterisations of the response may have been dominated by a small number of regional events, calling into question the robustness of previous studies.
 
 The dynamical importance of the Southern Ocean eddy field, and uncertainty over the robustness of its variability and trends, motivate a deeper investigation into the processes that control Southern Ocean eddies.
 A key issue here is the extent to which the eddy field purely responds to external (atmospheric) forcing, versus the role of chaotic and intrinsic variability in determining eddy energy.
-The fact that high-frequency eddy variability is random and chaotic is well-known, and even non-eddying ocean models can produce (a small amount of) intrinsic variability via large-scale baroclinic instability \citep[e.g.][]{DeVerdiere1999}.
+The fact that high-frequency eddy variability is random and chaotic is well-known, and even non-eddying ocean models can produce (a small amount of) intrinsic variability via large-scale baroclinic instability \citep[e.g.][]{DeVerdiere1999,Constantinou2021}.
 At longer timescales intrinsic variability can emerge from oceanic non-linearities under constant or seasonal forcing and persists under variable forcing \citep{Leroux2018}.
 Such intrinsic variabilty has a random phase (that is, it is chaotic in character); it mostly emerges at mesoscale and can cascade toward interannual time scales and O(1000$\,$km) space scales \citep{Serazin-etal-2018}.
 One of the goals of this work is characterise the spatiotemporal extent of chaotic, intrinsic, variability in determining  Southern Ocean EKE.
@@ -177,7 +177,7 @@ E_i = \frac{1}{2}(u_i'^2 + v_i'^2),
 \end{equation}
 \end{linenomath*}
 and subsampled at monthly temporal resolution.
-It is notable that $E_i$ contains a large component of seasonal variation \citep{Martinez-Moreno2021} which dominates the statistics.
+It is notable that $E_i$ contains a large component of seasonal variation which dominates the statistics \citep{Martinez-Moreno2021}.
 To look at the forced response, we therefore deseasonalise $E_i$, by removing the climatological mean for each month.
 We then proceed to compute ensemble statistics from this deseasonalised EKE.
 
