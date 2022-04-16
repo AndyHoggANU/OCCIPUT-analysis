@@ -1,0 +1,137 @@
+\documentclass[11pt]{article}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{a4paper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{color}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+\title{Brief Article}
+\author{The Author}
+%\date{}                                           % Activate to display a given date or no date
+
+\begin{document}
+%\maketitle
+
+We would like to convey our thanks to both reviewers for the constructive and positive reviews of our paper. 
+In the following we have addressed each of the reviewers' comments -- with their comments in blue and our response in plain text.
+
+\section*{Response to Reviewer 1}
+
+{\color{blue} This study uses an ensemble of 50 simulations from an eddy-permitting ocean model to investigate the relative importance of forced (coherent) and intrinsic (chaotic) eddy responses. The simulations use the same wind forcing but differ from each other by adding a stochastic perturbation over 1960. The authors define the forced EKE as the ensemble mean EKE from the 50 simulations, and the chaotic EKE as the difference between each simulation and the ensemble mean. The authors find that the Southern Ocean eddy field is dominated by intrinsic processes instead of forced processes. In addition, the authors identified two timescales on which the wind stress and the forced eddy field are linked. 
+
+Overall, the question is important, the approach is creative, the findings are significant, and the presentation is high quality. I think the paper is certainly publishable in JGR. I only have a few minor comments and questions, which I hope the authors can clarify before my recommendation of acceptance.\\}
+
+\noindent Our thanks to the reviewer for their positive assessment. 
+We have responded in detail to each of the reviewer's comments below.
+
+\subsection*{\color{blue}Details:}
+
+{\color{blue} 
+\begin{description}
+\item[ Line 84: ] ``the Southern Ocean", missing words like EKE or eddy field?\\
+{\color{black}  We agree and have changed to read ``Southern Ocean EKE'' }
+
+\item[ Lines 140-141:] ``the member's global mean sea level anomaly", is this a single value or a time series? If this is a value, it's more likely to shift each ensemble member's sea surface height with a different value. But it wouldn't affect the sea level anomaly time series at each grid point. \\
+{\color{black} This statement refers to a timeseries of the globally averaged sea level anomaly. We have clarified this statement to read:\\
+ ``For each ensemble member, and at every time step, the member's global mean sea level anomaly is subtracted at every grid point  \ldots" }
+
+\item[Lines 158-162:] The authors mention that the seasonal EKE variation dominates the statistics. To look at the forced response or the correlation between ensemble-mean EKE and wind stress, they deseasonalize the EKE time series. There is some missing information about how they smooth wind stress, the same as the deseasonalized EKE? Also, maybe some general information about the wind stress can be provided in the method section.\\
+{\color{black} Yes, the seasonal cycle is also removed from the wind stress. We have added, on line 189, the caveat that wind stress ``\ldots has been deseasonalised in a similar way to $E_i$ \ldots". }
+
+\item[Lines 176-179:] ``Analogously, the intrinsic variance emerges from the variance, indicating the spread of each member from the ensemble mean"; I feel this sentence is not accurate. Normally the closest meaning of spread is the standard deviation. I would suggest the author rephrase it like this: ``For each time step, the intrinsic variance emerges from the variance of EKE difference between ensemble mean and each member of the 50 simulations.'' \\
+{\color{black} Amended as suggested. }
+
+\item[Lines 185-186:] between the EKE (...) AND WHAT? Missing words?\\
+{\color{black} We have added ``and its forcing''. }
+
+\item[Line 201:] show $\to$ shows\\
+{\color{black} Amended. }
+
+\item[Figure 1:] The ensemble mean EKE pattern is consistent with the mean EKE pattern from satellite altimetry. Since this study focuses more on the EKE variabilities, it would be helpful showing to what extent the averaged EKE anomaly time series (group members and ensemble mean) agree with the EKE anomaly time series from satellite altimetry. Also, please label the longitude, latitude, and the major topographic features. \\
+{\color{black}  }
+
+\item[Line 231:] add citations (e.g., Meredith \& Hogg, 2006; Hogg et al., 2015) \\
+{\color{black} Added as suggested }
+
+\item[Line 231:] As found in this paper, the significance of the wind-leading lag correlation is affected by the size and location of the research area. To compare with previous studies, such as Meredith \& Hogg (2006), Hogg et al., (2015), doesn't it make more sense to use the same average boxes? \\
+{\color{black} This line actually refers to the circumpolar average, and so provides a direct comparison, as the reviewer suggests.  
+For the later parts of the paper where we examine sub-domains, we considered replicating the original Meredith \& Hogg (2006) boxes, but we found that the ensemble approach allows us to refine those boxes to be considerably smaller, while still obtaining meaningful results.
+We could happily add an extra figure with the larger Meredith \& Hogg (2006) boxes, but considered this to be of marginal value to the reader.}
+
+\item[Figure 2:] Based on the definition of EKE and wind stress, they should always be positive. To be accurate, I would suggest the authors label them clearly. Same comment for time series plots in figure 3 and figure 4. \\
+{\color{black} We agree more information is needed here and  have noted in the caption of figure 2 that the timeseries shows ``ensemble mean {\color{red}EKE anomaly} (red) along with wind stress {\color{red}anomaly} \ldots'', where red text has been added. 
+The captions for figures 3 and 4 have been similarly clarified.}
+
+\item[Line 239-240:] What's the T value for the 4 months and 30 months peaks? \\
+{\color{black}  }
+
+\item[Line 241:] dominanent $\to$ dominant?\\
+{\color{black} Corrected, thankyou. }
+
+\item[Line 274:] Southeast $\to$ Southwest\\
+{\color{black} Amended. }
+
+\item[Figure 3:] (a) A colorbar could be useful. Also, when you define the 3 boxes, do you use rectangular boxes like (70$^\circ$E-120$^\circ$E, 45$^\circ$S-60$^\circ$S)? The boxes shown in Figure 3(a) are more like irregular polygons. It will be better if the author can describe how those boxes are defined. \\
+{\color{black}  }
+
+\item[Line 276:] Do the envelopes in Figures 2(b), 3(d), and 4(d) indicate significant lag correlations? If so, it's not accurate to state "no significant response" here.\\
+{\color{black} We agree with the reviewer here and have removed that statement. }
+
+\item[Figure 4:] (a) Same comments as Figure 3 (a). In figure 4(b), the caption of the right axis is missing. \\
+{\color{black}  }
+
+\item[Figure 5:] Why is there a small missing longitudinal sector?\\
+{\color{black} The small missing sector is a consequence of coarsening onto the larger grid, meaning that periodic fields are poorly mapped onto the circumpolar projection. }
+
+\end{description}
+}
+
+\newpage
+
+\section*{Response to Reviewer 2}
+
+{\color{blue} I would like to begin by apologising to the authors for the delay in my review. Unfortunately, it became due at a time where there were multiple demands upon my time and I did a poor job at managing them. I apologise for the delay to the publication process this has caused.
+
+The paper is an interesting and well written look at how variability in the Southern Ocean. It is presented very clearly, despite the complex nature of mesoscale eddy dynamics and the challenges of analysing what I am sure is a very large dataset. The analysis uses some simple statistical metrics to break the variability into a fraction that is due to intrinsic variability and that due to direct forcing from wind stress. The conclusions are well supported by the data and the figures are extremely clear. It is very easy for me to recommend publication as-is.
+
+I have noted a few very minor things below, which the authors may wish to address at the proof stage.\\}
+
+\noindent Our thanks to the reviewer for their suggestions; see the following for our responses.
+
+{\color{blue} 
+\begin{description}
+\item[line 66;] dynamics, plural or singular? I'm not sure.\\
+{\color{black} Singular -- amended to ``dynamic''. }
+
+\item[line 128;] is this spinup forced by DFS5.2 as well?\\
+{\color{black} Yes -- we have added that information to the revised manuscript. }
+
+\item[line 139;] daily or day?\\
+{\color{black} Altered to ``day''.}
+
+\item[line 158;] is the subsampling achieved by selecting a single mean or by averaging them into monthly equivalents?\\
+{\color{black} We don't quite understand the point that the reviewer is getting at here, but have clarified by adding the phrase ``\ldots  through weighted averages". }
+
+\item[line 161;] removing THE mean seasonal cycle\\
+{\color{black} Amended as suggested }
+
+\item[line 197;] is the $r$ in Eq. (10) the correlation coefficient at the current lag, rather than at a specific lag?\\
+{\color{black} Yes, $r$ is as defined 9 lines earlier. }
+
+\item[line 214;] ensemble member AS thin grey lines\\
+{\color{black} Amended as suggested. }
+
+\item[line 241;] dominanent to dominant?\\
+{\color{black} Corrected. }
+
+\item[line 372;] a reference would be helpful for anyone unfamiliar with the literature.\\
+{\color{black} Reference to Arbic \& Flierl (2004) added. }
+
+\end{description}
+}
+
+\end{document}  
