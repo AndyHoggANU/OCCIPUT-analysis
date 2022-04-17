@@ -20,20 +20,18 @@
 \begin{document}
 %\maketitle
 
-
+\section*{Response to Reviewers}
 \noindent We would like to convey our thanks to both reviewers for the constructive and positive reviews of our paper. 
-In the following we have addressed each of the reviewers' comments -- with their comments in blue and our response in plain text.
+In the following pages we have addressed each of the reviewers' comments -- with their comments in blue and our response in plain text.
 
-\section*{Response to Reviewer 1}
+\subsection*{Response to Reviewer 1}
 
 {\color{blue} This study uses an ensemble of 50 simulations from an eddy-permitting ocean model to investigate the relative importance of forced (coherent) and intrinsic (chaotic) eddy responses. The simulations use the same wind forcing but differ from each other by adding a stochastic perturbation over 1960. The authors define the forced EKE as the ensemble mean EKE from the 50 simulations, and the chaotic EKE as the difference between each simulation and the ensemble mean. The authors find that the Southern Ocean eddy field is dominated by intrinsic processes instead of forced processes. In addition, the authors identified two timescales on which the wind stress and the forced eddy field are linked. 
 
 Overall, the question is important, the approach is creative, the findings are significant, and the presentation is high quality. I think the paper is certainly publishable in JGR. I only have a few minor comments and questions, which I hope the authors can clarify before my recommendation of acceptance.\\}
 
 \noindent Our thanks to the reviewer for their positive assessment. 
-We have responded in detail to each of the reviewer's comments below.
-
-\subsection*{\color{blue}Details:}
+We have responded in detail to each of the reviewer's specific comments below.
 
 {\color{blue} 
 \begin{description}
@@ -45,7 +43,7 @@ We have responded in detail to each of the reviewer's comments below.
  ``For each ensemble member, and at every time step, the member's global mean sea level anomaly is subtracted at every grid point  \ldots" }
 
 \item[Lines 158-162:] The authors mention that the seasonal EKE variation dominates the statistics. To look at the forced response or the correlation between ensemble-mean EKE and wind stress, they deseasonalize the EKE time series. There is some missing information about how they smooth wind stress, the same as the deseasonalized EKE? Also, maybe some general information about the wind stress can be provided in the method section.\\
-{\color{black} Yes, the seasonal cycle is also removed from the wind stress. We have added, on line 189, the caveat that wind stress ``\ldots has been deseasonalised similarly to $E_i$ \ldots". }
+{\color{black} Yes, the seasonal cycle is also removed from the wind stress. We have added, on line 193 of the revised manuscript, the caveat that wind stress ``\ldots has been deseasonalised similarly to $E_i$ \ldots". }
 
 \item[Lines 176-179:] ``Analogously, the intrinsic variance emerges from the variance, indicating the spread of each member from the ensemble mean"; I feel this sentence is not accurate. Normally the closest meaning of spread is the standard deviation. I would suggest the author rephrase it like this: ``For each time step, the intrinsic variance emerges from the variance of EKE difference between ensemble mean and each member of the 50 simulations.'' \\
 {\color{black} Amended as suggested. }
@@ -58,9 +56,9 @@ We have responded in detail to each of the reviewer's comments below.
 
 \item[Figure 1:] The ensemble mean EKE pattern is consistent with the mean EKE pattern from satellite altimetry. Since this study focuses more on the EKE variabilities, it would be helpful showing to what extent the averaged EKE anomaly time series (group members and ensemble mean) agree with the EKE anomaly time series from satellite altimetry. Also, please label the longitude, latitude, and the major topographic features. \\
 {\color{black}  We have added latitude and longitude to Figure 1 as suggested (and made minor improvements to the plot).
-We tested labelling major topographic features, but there are many features that could be labelled and it quickly gets messy, so opted to leave the plot as is.
+We tested labelling major topographic features, but there are many features that could be labelled and it quickly gets messy, so we opted to leave the plot without labelling features.
 
-Including the observed EKE trend is a good idea, and we have added this data to Figure~2(a) (green line), using EKE data calculated from Mart\`inez-Moreno et al. (2021).
+Including the observed EKE trend is a good idea, and we have added this data to Figure~2(a) (green line), using EKE data calculated from Mart\`inez-Moreno et al. (2022).
 This new plot shows that the observed EKE is indistinguishable from the individual ensemble members, but differs from the ensemble mean.}
 
 \item[Line 231:] add citations (e.g., Meredith \& Hogg, 2006; Hogg et al., 2015) \\
@@ -69,7 +67,7 @@ This new plot shows that the observed EKE is indistinguishable from the individu
 \item[Line 231:] As found in this paper, the significance of the wind-leading lag correlation is affected by the size and location of the research area. To compare with previous studies, such as Meredith \& Hogg (2006), Hogg et al., (2015), doesn't it make more sense to use the same average boxes? \\
 {\color{black} This line actually refers to the circumpolar average, and so provides a direct comparison, as the reviewer suggests.  
 For the later parts of the paper where we examine sub-domains, we considered replicating the original Meredith \& Hogg (2006) boxes, but we found that the ensemble approach allows us to refine those boxes to be considerably smaller, while still obtaining meaningful results.
-We could happily add an extra figure with the larger Meredith \& Hogg (2006) boxes, but considered this to be of marginal value to the reader.}
+We could happily add an extra figure with the larger Meredith \& Hogg (2006) boxes, but consider this additional figure to be of marginal value to the reader.}
 
 \item[Figure 2:] Based on the definition of EKE and wind stress, they should always be positive. To be accurate, I would suggest the authors label them clearly. Same comment for time series plots in figure 3 and figure 4. \\
 {\color{black} We agree more information is needed here and have noted in the subtitle of figure 2(a) and the caption of figure 2 that the timeseries shows ``ensemble mean {\color{red}EKE anomaly} (red) along with wind stress {\color{red}anomaly} \ldots'', where red text has been added. 
@@ -92,17 +90,21 @@ These values have been added to the manuscript as suggested.  }
 {\color{black} We agree with the reviewer here and have removed that statement. }
 
 \item[Figure 4:] (a) Same comments as Figure 3 (a). In figure 4(b), the caption of the right axis is missing. \\
-{\color{black}  }
+{\color{black}  Figure 4 now includes a colorbar and improved box boundaries as per Figure 3.
+The missing axis label has been reinstated.}
 
 \item[Figure 5:] Why is there a small missing longitudinal sector?\\
-{\color{black} The small missing sector is a consequence of coarsening onto the larger grid, meaning that periodic fields are poorly mapped onto the circumpolar projection. }
+{\color{black} The small missing sector was a consequence of a particular choice of option when coarsening onto the larger grid, meaning that periodic fields were poorly mapped onto the circumpolar projection.  
+We have now used a better option for coarsening and the field now covers the full 360$^\circ$ of longitudes.
+
+We have also fixed the irregular polygon shapes of the boxes on Figure 5, as per Figures 3 and 4.}
 
 \end{description}
 }
 
 \newpage
 
-\section*{Response to Reviewer 2}
+\subsection*{Response to Reviewer 2}
 
 {\color{blue} I would like to begin by apologising to the authors for the delay in my review. Unfortunately, it became due at a time where there were multiple demands upon my time and I did a poor job at managing them. I apologise for the delay to the publication process this has caused.
 
@@ -127,10 +129,10 @@ I have noted a few very minor things below, which the authors may wish to addres
 {\color{black} We don't quite understand the point that the reviewer is getting at here, but have clarified by adding the phrase ``\ldots  through weighted averages". }
 
 \item[line 161;] removing THE mean seasonal cycle\\
-{\color{black} Amended as suggested }
+{\color{black} Amended as suggested.}
 
 \item[line 197;] is the $r$ in Eq. (10) the correlation coefficient at the current lag, rather than at a specific lag?\\
-{\color{black} Yes, $r$ is as defined 9 lines earlier. }
+{\color{black} Yes, $r$ is the coefficient at a given lag, as defined 9 lines earlier. }
 
 \item[line 214;] ensemble member AS thin grey lines\\
 {\color{black} Amended as suggested. }
