@@ -180,7 +180,7 @@ E_i = \frac{1}{2}(u_i'^2 + v_i'^2),
 \end{linenomath*}
 and subsampled at monthly temporal resolution through weighted averages.
 It is notable that $E_i$ contains a large component of seasonal variation which dominates the statistics \citep{Martinez-Moreno2022}.
-To look at the forced response, we therefore deseasonalise $E_i$, by removing the mean seasonal cycle.
+To look at the forced response, we therefore deseasonalise $E_i$, by removing the climatological mean; we eliminate noise on the monthly timescale by filtering with a 4-month rolling mean.
 We then proceed to compute ensemble statistics from this deseasonalised EKE.
 
 \subsection{Ensemble eddy statistics}
@@ -221,7 +221,7 @@ R_i =  \frac{\overline{\epsilon^2}}{\overline{\epsilon^2} + \sigma^2_{\langle E 
 When $R_i$ approaches unity, the system is dominated by intrinsic variability, while at the limit  of $R_i \to 0$ the system is solely responding to forced variability induced by atmospheric forcing.
 
 To examine the relationship between the EKE (of either the ensemble mean, or from individual ensemble members) and its forcing, we are guided by previous work which emphasises the role of wind stress in governing the eddy variability at different timescales \citep[e.g.][]{Hogg2015, Sinha2016}.
-Thus, we look at the correlation coefficient, $r$, at a range of lags between the wind stress $|\tau|$ (which is identical for all ensemble members and has been deseasonalised in a similar way to $E_i$) and EKE.
+Thus, we look at the correlation coefficient, $r$, at a range of lags between the wind stress $|\tau|$ (which is identical for all ensemble members and has been deseasonalised similarly to $E_i$) and EKE.
 For each correlation we evaluate the statistical significance of the correlation \citep[following, e.g.][]{Santer2000}.
 We first calculate the effective sample size, $N_e$, where
 \begin{linenomath*}
@@ -256,13 +256,14 @@ The patterns of EKE in this model broadly match the regional variations of EKE o
 
 For each of the 50 members of the OCCIPUT ensemble we take the EKE averaged over the entire Southern Ocean (40$^\circ$-60$^\circ$S), and plot the deseasonalised EKE anomalies from each ensemble member as thin grey lines in Fig.~\ref{Fig:2}(a). 
 This plot highlights the considerable spread in EKE, even when averaged over the full circumpolar belt; in other words, there is a significant component of chaotic (intrinsic) variability in the Southern Ocean eddy field.
+The observed EKE anomaly \citep[calculated using data from ][ and filtered using the same methods as model output]{Martinez-Moreno2022} indicates that observations are indistinguishable from the individual ensemble members.
 Nonetheless, when averaged over all ensemble members (red line in Fig.~\ref{Fig:2}a) the existence of a coherent (forced) component of eddy variability is revealed.
 Averaged over this wide region the fraction, $R_i$, of intrinsic variance is 0.82, confirming the visual impression that intrinsic processes dominate the variability in the eddy field averaged over the basin.
 
 \begin{figure}[t]
 \begin{center}
 \includegraphics[width=\hsize]{Figure2}
-\caption{Eddy kinetic energy statistics over the Southern Ocean (40$^\circ$S--60$^\circ$S). (a) Spatially averaged deseasonalised EKE anomaly (relative to climatology) for individual ensemble members (grey) and the ensemble mean EKE anomaly (red) along with wind stress anomaly (black); and (b) Time-lagged correlation between wind stress and EKE for the ensemble mean (red) and individual ensemble  members (grey) -- with two individual ensemble members highlighted in magenta and orange.}
+\caption{Eddy kinetic energy statistics over the Southern Ocean (40$^\circ$S--60$^\circ$S). (a) Spatially averaged deseasonalised EKE anomaly (relative to climatology) for individual ensemble members (grey) and the ensemble mean EKE anomaly (red) and observed EKE anomaly from the satellite era \citep[green line; calculated from ][]{Martinez-Moreno2022}, along with wind stress anomaly (black); and (b) Time-lagged correlation between wind stress and EKE for the ensemble mean (red) and individual ensemble  members (grey) -- with two individual ensemble members highlighted in magenta and orange.}
 \label{Fig:2}
 \end{center}
 \end{figure}
@@ -274,7 +275,7 @@ However, the time-lagged correlations between wind stress and EKE implies that t
 The intrinsically variable nature of Southern Ocean eddies means that for some ensemble members, there is no meaningful correlation between wind stress and eddies (grey lines in Fig~\ref{Fig:2}b).
 On the other hand, ensemble member 5 (magenta line) has a clear (and significant; $T = 5.5$) correlation with a 4-month lag, while member 25 (orange line) is weakly correlated at 6 months, and significantly correlated ($T = 4.2$) at a 24-month lag.
 These isolated examples highlight the differing behaviour of each ensemble member. 
-The ensemble mean (red line in Fig~\ref{Fig:2}b) includes a significant correlation at $\sim$4 months and a second significant peak at $\sim$30 months.
+The ensemble mean (red line in Fig~\ref{Fig:2}b) includes a significant correlation at $\sim$4~months ($T=5.9$) and a second significant peak at $\sim$30~months ($T=3.5$).
 Thus, two distinct timescales of response of the Southern Ocean eddy field to wind stress are present in this model, overprinted by a dominant and complex influence of chaotic variability. 
 
 \begin{figure}[t]

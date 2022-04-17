@@ -1,6 +1,10 @@
 \documentclass[11pt]{article}
 \usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
-\geometry{a4paper}                   % ... or a4paper or a5paper or ... 
+\geometry{a4paper,
+  top=25mm,
+  bottom=30mm,
+  left=25mm,
+  right=25mm}                   % ... or a4paper or a5paper or ... 
 %\geometry{landscape}                % Activate for for rotated page geometry
 %\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
 \usepackage{graphicx}
@@ -16,7 +20,8 @@
 \begin{document}
 %\maketitle
 
-We would like to convey our thanks to both reviewers for the constructive and positive reviews of our paper. 
+
+\noindent We would like to convey our thanks to both reviewers for the constructive and positive reviews of our paper. 
 In the following we have addressed each of the reviewers' comments -- with their comments in blue and our response in plain text.
 
 \section*{Response to Reviewer 1}
@@ -33,14 +38,14 @@ We have responded in detail to each of the reviewer's comments below.
 {\color{blue} 
 \begin{description}
 \item[ Line 84: ] ``the Southern Ocean", missing words like EKE or eddy field?\\
-{\color{black}  We agree and have changed to read ``Southern Ocean EKE'' }
+{\color{black}  We agree and have changed to read ``Southern Ocean EKE''.}
 
 \item[ Lines 140-141:] ``the member's global mean sea level anomaly", is this a single value or a time series? If this is a value, it's more likely to shift each ensemble member's sea surface height with a different value. But it wouldn't affect the sea level anomaly time series at each grid point. \\
 {\color{black} This statement refers to a timeseries of the globally averaged sea level anomaly. We have clarified this statement to read:\\
  ``For each ensemble member, and at every time step, the member's global mean sea level anomaly is subtracted at every grid point  \ldots" }
 
 \item[Lines 158-162:] The authors mention that the seasonal EKE variation dominates the statistics. To look at the forced response or the correlation between ensemble-mean EKE and wind stress, they deseasonalize the EKE time series. There is some missing information about how they smooth wind stress, the same as the deseasonalized EKE? Also, maybe some general information about the wind stress can be provided in the method section.\\
-{\color{black} Yes, the seasonal cycle is also removed from the wind stress. We have added, on line 189, the caveat that wind stress ``\ldots has been deseasonalised in a similar way to $E_i$ \ldots". }
+{\color{black} Yes, the seasonal cycle is also removed from the wind stress. We have added, on line 189, the caveat that wind stress ``\ldots has been deseasonalised similarly to $E_i$ \ldots". }
 
 \item[Lines 176-179:] ``Analogously, the intrinsic variance emerges from the variance, indicating the spread of each member from the ensemble mean"; I feel this sentence is not accurate. Normally the closest meaning of spread is the standard deviation. I would suggest the author rephrase it like this: ``For each time step, the intrinsic variance emerges from the variance of EKE difference between ensemble mean and each member of the 50 simulations.'' \\
 {\color{black} Amended as suggested. }
@@ -52,7 +57,11 @@ We have responded in detail to each of the reviewer's comments below.
 {\color{black} Amended. }
 
 \item[Figure 1:] The ensemble mean EKE pattern is consistent with the mean EKE pattern from satellite altimetry. Since this study focuses more on the EKE variabilities, it would be helpful showing to what extent the averaged EKE anomaly time series (group members and ensemble mean) agree with the EKE anomaly time series from satellite altimetry. Also, please label the longitude, latitude, and the major topographic features. \\
-{\color{black}  }
+{\color{black}  We have added latitude and longitude to Figure 1 as suggested (and made minor improvements to the plot).
+We tested labelling major topographic features, but there are many features that could be labelled and it quickly gets messy, so opted to leave the plot as is.
+
+Including the observed EKE trend is a good idea, and we have added this data to Figure~2(a) (green line), using EKE data calculated from Mart\`inez-Moreno et al. (2021).
+This new plot shows that the observed EKE is indistinguishable from the individual ensemble members, but differs from the ensemble mean.}
 
 \item[Line 231:] add citations (e.g., Meredith \& Hogg, 2006; Hogg et al., 2015) \\
 {\color{black} Added as suggested }
@@ -63,11 +72,12 @@ For the later parts of the paper where we examine sub-domains, we considered rep
 We could happily add an extra figure with the larger Meredith \& Hogg (2006) boxes, but considered this to be of marginal value to the reader.}
 
 \item[Figure 2:] Based on the definition of EKE and wind stress, they should always be positive. To be accurate, I would suggest the authors label them clearly. Same comment for time series plots in figure 3 and figure 4. \\
-{\color{black} We agree more information is needed here and  have noted in the caption of figure 2 that the timeseries shows ``ensemble mean {\color{red}EKE anomaly} (red) along with wind stress {\color{red}anomaly} \ldots'', where red text has been added. 
+{\color{black} We agree more information is needed here and have noted in the subtitle of figure 2(a) and the caption of figure 2 that the timeseries shows ``ensemble mean {\color{red}EKE anomaly} (red) along with wind stress {\color{red}anomaly} \ldots'', where red text has been added. 
 The captions for figures 3 and 4 have been similarly clarified.}
 
 \item[Line 239-240:] What's the T value for the 4 months and 30 months peaks? \\
-{\color{black}  }
+{\color{black} The T-values in this case are 5.9 and 3.5 respectively. 
+These values have been added to the manuscript as suggested.  }
 
 \item[Line 241:] dominanent $\to$ dominant?\\
 {\color{black} Corrected, thankyou. }
@@ -76,7 +86,7 @@ The captions for figures 3 and 4 have been similarly clarified.}
 {\color{black} Amended. }
 
 \item[Figure 3:] (a) A colorbar could be useful. Also, when you define the 3 boxes, do you use rectangular boxes like (70$^\circ$E-120$^\circ$E, 45$^\circ$S-60$^\circ$S)? The boxes shown in Figure 3(a) are more like irregular polygons. It will be better if the author can describe how those boxes are defined. \\
-{\color{black}  }
+{\color{black}  We have added a colorbar as suggested. Regarding the irregular polygons -- yes, the boxes are long lines of latitude, but we were a little lazy in plotting these on the map projection. These boxes have now been fixed to follow latitude lines. }
 
 \item[Line 276:] Do the envelopes in Figures 2(b), 3(d), and 4(d) indicate significant lag correlations? If so, it's not accurate to state "no significant response" here.\\
 {\color{black} We agree with the reviewer here and have removed that statement. }
